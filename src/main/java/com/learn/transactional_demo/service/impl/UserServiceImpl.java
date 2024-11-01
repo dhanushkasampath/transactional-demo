@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Transactional
-    public UserDto persistUser(UserDto userDto, Boolean isValid) {
+    public UserDto persistUser(UserDto userDto, Boolean isValid) { // until this method successfully completed any data does not persist in the tables. it works on a clone of table
 
         User user = getUser(userDto);
         userRepository.save(user);
